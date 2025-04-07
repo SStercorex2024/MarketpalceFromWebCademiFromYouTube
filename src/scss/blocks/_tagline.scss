@@ -1,0 +1,35 @@
+.tagline {
+  position: relative;
+  font-family: var(--font-main);
+  font-size: 14px;
+
+
+  display: flex;
+  justify-content: center;
+  column-gap: 12px;
+  align-items: center;
+  padding: 8px 24px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+
+  &__description {
+    font-weight: 500;
+    line-height: 1.6;
+
+  }
+
+  &__link {
+    display: flex;
+    column-gap: 4px;
+    color: var(--color-yellow);
+    border-bottom: 1px solid var(--color-yellow);
+    font-weight: 500;
+    line-height: 1.7;
+  }
+
+  &__button {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
+}
