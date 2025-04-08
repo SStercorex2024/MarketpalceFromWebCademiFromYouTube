@@ -1,6 +1,6 @@
 :root {
-  --container-width: 1200px;
-  --container-padding: 15px;
+  --container-width: 1184px;
+  --container-padding: 32px;
 
   --font-main: "Inter", sans-serif;
   --font-accent: 'Poppins', sans-serif;
@@ -14,7 +14,14 @@
   --accent: #ac182c;
   --link-color: #2578c8;
   --color-yellow: #FFAB00;
+  --color-neutral-07-100-dark: #141718;
 
+  --color-yellow-accent: #FFAB00A3;
+  --bg-color-for-menu: var(--color-yellow-accent);
+
+
+  --cotainer-width: 1440px;
+  --container-padding-x: 20px;
 
   --laptop-size: 1199px;
   --tablet-size: 959px;

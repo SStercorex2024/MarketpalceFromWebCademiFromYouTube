@@ -38,3 +38,8 @@
 .flex-center {
 	justify-content: center;
 }
+.container {
+	max-width: calc(var(--cotainer-width) + var(--container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+}

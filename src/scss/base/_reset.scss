@@ -13,8 +13,9 @@
 
 /* Links */
 
-a, a:link, a:visited  {
+a, a:link {
     text-decoration: none;
+	color: inherit;
 }
 
 a:hover  {
