@@ -1,0 +1,6 @@
+.headline {
+  &--4 {
+    @include font-style(40, 44, 500);
+    font-family: var(--font-accent);
+  }
+}

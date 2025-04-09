@@ -17,5 +17,10 @@
 
   &--s {
     padding: 6px 40px;
+    @include font-style(16, 28, 500)
+  }
+
+  &-wide {
+    width: 100%;
   }
 }
