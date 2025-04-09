@@ -12,9 +12,11 @@
   --page-bg: #fff;
   --text-color: #000;
   --accent: #ac182c;
-  --link-color: #2578c8;
+  --title-important-color: #377DFF;
   --color-yellow: #FFAB00;
   --color-neutral-07-100-dark: #141718;
+
+  --color-btn-hover: rgba(20, 23, 24, .5);
 
   --color-yellow-accent: #FFAB00A3;
   --bg-color-for-menu: var(--color-yellow-accent);
@@ -22,6 +24,11 @@
 
   --cotainer-width: 1440px;
   --container-padding-x: 20px;
+
+  --border-radius-small: 4px;
+  --border-radius-normal: 6px;
+  --border-radius-big: 8px;
+
 
   --laptop-size: 1199px;
   --tablet-size: 959px;

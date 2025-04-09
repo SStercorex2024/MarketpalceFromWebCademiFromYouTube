@@ -1,0 +1,21 @@
+.button {
+  background-color: var(--color-neutral-07-100-dark);
+  color: var(--color-light);
+  border-radius: var(--border-radius-big);
+  border: 1px solid var(--color-neutral-07-100-dark);
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  @include hover {
+    //background-color: var(--color-btn-hover);
+    background-color: transparent;
+    color: var(--color-neutral-07-100-dark);
+  }
+
+  &--m {
+    padding: 12px 56px;
+  }
+
+  &--s {
+    padding: 6px 40px;
+  }
+}
