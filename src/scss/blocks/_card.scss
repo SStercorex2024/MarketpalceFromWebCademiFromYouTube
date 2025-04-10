@@ -3,6 +3,8 @@
   display: grid;
   row-gap: 12px;
   width: 262px;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     @include hover {

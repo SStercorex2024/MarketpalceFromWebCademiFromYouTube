@@ -1,0 +1,48 @@
+.swiper {
+  &-slide {
+    width: 262px !important;
+  }
+
+
+  &-pagination {
+    position: static;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+
+    &-bullet {
+      display: flex;
+      position: relative;
+      cursor: pointer;
+
+
+      width: 16px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 1px solid transparent;
+
+      transition: all .2s ease-in-out;
+
+      &::before {
+        content: '';
+        @include abs-center;
+
+        transition: all 0.3s ease;
+
+        width: 8px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--color-neutral-04-10);
+      }
+
+      &-active {
+        border: 1px solid var(--color-neutral-07-100-dark);
+
+        &::before {
+          background-color: var(--color-neutral-07-100-dark);
+        }
+      }
+    }
+  }
+}

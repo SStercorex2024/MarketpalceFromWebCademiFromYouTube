@@ -9,4 +9,9 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__slider{
+    display: flex;
+    column-gap: 24px;
+  }
 }
