@@ -1,0 +1,12 @@
+.collection {
+  &__header {
+    padding: 48px 0;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 24px;
+
+    grid-template-columns:repeat(2, 1fr);
+  }
+}

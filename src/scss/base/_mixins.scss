@@ -43,3 +43,16 @@
   line-height: $height / $size;
   font-weight: $weight;
 }
+
+@mixin abs-bl($bottom,$left) {
+  position: absolute;
+  left: #{$left}px;
+  bottom: #{$bottom}px;
+}
+
+@mixin abs-tbl($top,$bottom,$left) {
+  position: absolute;
+  top: #{$top}px;
+  left: #{$left}px;
+  bottom: #{$bottom}px;
+}

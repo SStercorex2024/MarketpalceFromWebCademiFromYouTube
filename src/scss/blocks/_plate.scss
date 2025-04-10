@@ -1,0 +1,50 @@
+.plate {
+  position: relative;
+
+  &--tall {
+    grid-row: span 2;
+  }
+
+  &__text {
+    color: #121212;
+
+    @include abs-bl(40, 32);
+
+    &-tall {
+      @include abs-bl(48, 48);
+    }
+  }
+
+  &__title {
+    padding-bottom: 12px;
+
+    @include font-style(34, 38, 500);
+  }
+
+  &__link {
+    display: inline-flex;
+    column-gap: 4px;
+    align-items: center;
+
+    border-bottom: 1px solid currentColor;
+
+    @include font-style(16, 28, 500);
+
+
+    &-arrow {
+      width: 16px;
+      height: 16px;
+
+      background-image: url("../../img/navigation/arrow-right.svg");
+    }
+
+    &-cower {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
