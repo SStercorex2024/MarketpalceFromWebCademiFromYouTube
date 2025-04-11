@@ -1,0 +1,51 @@
+.promotion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__img-container {
+    background-image: url("../../img/promotion/promotion1.jpg");
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../../img/promotion/promotion1@2x.jpg);
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    padding: 101px 0 101px 72px;
+
+    background-color: rgba(255, 171, 0, .4);
+  }
+
+  &__title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include font-style(40, 46, 500);
+    letter-spacing: -0.4px;
+  }
+
+  &__sale {
+    text-transform: uppercase;
+    color: var(--title-important-color);
+    @include font-style(16, 16, 700);
+  }
+
+  &__description {
+    @include font-style(20, 32, 400);
+  }
+
+  &__expires {
+    @include font-style(16, 26, 400);
+  }
+
+  &__timer {
+    padding-top: 16px;
+  }
+}

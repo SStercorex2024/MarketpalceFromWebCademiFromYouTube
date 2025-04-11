@@ -9,4 +9,11 @@
 
     grid-template-columns:repeat(2, 1fr);
   }
+
+  &__title{
+    letter-spacing: -0.6px;
+  }
+  &__link{
+    letter-spacing: -0.4px;
+  }
 }
