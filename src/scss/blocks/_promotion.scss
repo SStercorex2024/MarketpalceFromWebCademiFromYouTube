@@ -28,6 +28,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
     @include font-style(40, 46, 500);
+    font-family: var(--font-accent);
     letter-spacing: -0.4px;
   }
 

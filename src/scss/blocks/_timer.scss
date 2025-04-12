@@ -1,0 +1,25 @@
+.timer {
+  display: flex;
+  column-gap: 14px;
+  align-items: flex-start;
+
+  &__element {
+    text-align: center;
+  }
+
+  &__value {
+    @include font-style(34, 38, 500);
+    font-family: var(--font-accent);
+    line-height: 60px;
+    letter-spacing: -0.6px;
+
+    background-color: var(--page-bg);
+
+    width: 60px;
+    aspect-ratio: 1;
+  }
+
+  &__description {
+    @include font-style(12, 20, 400);
+  }
+}
