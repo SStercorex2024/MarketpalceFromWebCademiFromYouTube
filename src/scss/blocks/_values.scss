@@ -1,0 +1,40 @@
+.values {
+  font-family: var(--font-accent);
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 24px;
+    padding: 40px;
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 16px;
+    padding: 48px 32px;
+    width: 262px;
+    height: 220px;
+    background-color: var(--color-neutral-02-10-light-alt);
+  }
+
+  &__img {
+    width: 48px;
+    aspect-ratio: 1;
+  }
+
+  &__text {
+    display: block;
+    row-gap: 8px;
+  }
+
+  &__title {
+    @include font-style(20, 28, 500)
+  }
+
+  &__description {
+    @include font-style(14, 24, 400)
+  }
+}
