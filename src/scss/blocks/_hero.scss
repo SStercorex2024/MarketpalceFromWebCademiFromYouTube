@@ -2,11 +2,21 @@
   height: 820px;
   background-image: url(../../img/hero/bg-hero.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
+  background-color: var(--color-yellow-accent);
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url(../../img/hero/bg-hero@2x.jpg);
+  }
+
+  @include mobile {
+    height: 450px;
+  }
+
+  @include desktop-above {
+    background-size: contain;
+
   }
 
   &__container {
@@ -27,11 +37,20 @@
   }
 
   &__title {
-    font-size: 80px;
-    line-height: 84px;
-    font-weight: 500;
+    @include font-style(80, 84, 500);
+
+    text-wrap: balance;
     padding-bottom: 8px;
     letter-spacing: -3px;
+
+    @include tablet {
+      font-size: 55px;
+    }
+
+    @include mobile {
+      @include font-style(40, 42, 500)
+
+    }
 
     u {
       text-decoration: none;

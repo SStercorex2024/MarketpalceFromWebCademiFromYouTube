@@ -85,6 +85,10 @@
 
   &__price {
     @include font-style(16, 22, 600);
+
+    @include mobile {
+      @include font-style(14, 22, 600);
+    }
   }
 
   &__link {

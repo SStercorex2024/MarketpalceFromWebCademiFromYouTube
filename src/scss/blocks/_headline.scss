@@ -3,5 +3,10 @@
     @include font-style(40, 44, 500);
     letter-spacing: -0.4px;
     font-family: var(--font-accent);
+
+    @include tablet {
+      @include font-style(34, 38, 500);
+      letter-spacing: -0.6px;
+    }
   }
 }

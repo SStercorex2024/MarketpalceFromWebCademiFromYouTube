@@ -10,6 +10,10 @@
 
     @include abs-bl(40, 32);
 
+    @include tablet {
+      @include abs-bl(32, 32);
+    }
+
     &-tall {
       @include abs-bl(48, 48);
     }
@@ -18,7 +22,13 @@
   &__title {
     padding-bottom: 12px;
 
+    font-family: var(--font-accent);
+
     @include font-style(34, 38, 500);
+
+    @include tablet {
+      @include font-style(32, 32, 500);
+    }
   }
 
   &__link {
@@ -30,6 +40,9 @@
 
     @include font-style(16, 28, 500);
 
+    @include tablet {
+      @include font-style(14, 24, 500);
+    }
 
     &-arrow {
       width: 16px;
