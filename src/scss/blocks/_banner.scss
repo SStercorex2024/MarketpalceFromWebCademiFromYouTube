@@ -1,20 +1,26 @@
 .banner {
-  display: flex;
-  justify-content: center;
-
   background-image: url("../../img/join-banner/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-
-  height: 360px;
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url(../../img/join-banner/banner-bg@2x.jpg);
   }
   background-color: var(--bg-color-for-banner-bg);
 
+  @include mobile {
+    background-image: none;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    height: 360px;
+  }
+
   &__content {
+    height: 360px;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -24,6 +30,10 @@
     max-width: 488px;
 
     row-gap: 32px;
+
+    @include mobile {
+      max-width: 311px;
+    }
   }
 
   &__title {
@@ -31,7 +41,12 @@
   }
 
   &__description {
-    @include font-style(18, 30, 400)
+    @include font-style(18, 30, 400);
+    text-wrap: wrap;
+
+    @include mobile {
+      @include font-style(14, 22, 400);
+    }
   }
 
   &__form {
@@ -42,6 +57,13 @@
 
     color: var(--color-neutral-04-10-dark-alt);
 
+    &:focus-within {
+      -webkit-box-shadow: 0px -10px 5px -5px rgba(209, 9, 9, 0.6) inset;
+      -moz-box-shadow: 0px -10px 5px -5px rgba(209, 9, 9, 0.6) inset;
+      box-shadow: 0px -10px 5px -5px rgba(209, 9, 9, 0.6) inset;
+    }
+
+
     &--img {
       padding-top: 2px;
       padding-bottom: 2px;
@@ -50,6 +72,14 @@
 
     &-input {
       width: 396px;
+
+      &:focus {
+        color: var(--accent);
+      }
+
+      &:focus::placeholder {
+        color: transparent;
+      }
     }
 
     &-submit {

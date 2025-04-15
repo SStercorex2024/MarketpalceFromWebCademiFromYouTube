@@ -18,7 +18,13 @@
   &--s {
     padding: 6px 40px;
     letter-spacing: -0.4px;
-    @include font-style(16, 28, 500)
+    @include font-style(16, 28, 500);
+
+    @include mobile {
+      letter-spacing: -0.6px;
+
+      @include font-style(14, 22, 500)
+    }
   }
 
   &-wide {

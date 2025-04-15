@@ -1,19 +1,32 @@
 .collection {
   &__header {
-    padding: 48px 0;
+    padding-bottom: 48px;
+    @include mobile {
+      padding-bottom: 16px;
+    }
   }
 
   &__grid {
     display: grid;
     gap: 24px;
+    justify-content: center;
 
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(318px, 548px));
+
+    @include mobile {
+      grid-template-columns: repeat(auto-fit, minmax(318px, 548px));
+      row-gap: 16px;
+    }
   }
 
-  &__title{
+  &__title {
     letter-spacing: -0.6px;
+    @include tablet {
+      @include font-style(28, 34, 500)
+    }
   }
-  &__link{
+
+  &__link {
     letter-spacing: -0.4px;
   }
 }

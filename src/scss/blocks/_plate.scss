@@ -1,6 +1,10 @@
 .plate {
   position: relative;
 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
   &--tall {
     grid-row: span 2;
   }
@@ -10,15 +14,35 @@
 
     @include abs-bl(40, 32);
 
+    @include tablet {
+      @include abs-bl(32, 32);
+    }
+
     &-tall {
+
       @include abs-bl(48, 48);
+
+      @include tablet {
+        @include abs-bl(32, 32);
+      }
     }
   }
 
   &__title {
     padding-bottom: 12px;
+    letter-spacing: -0.6px;
+
+    font-family: var(--font-accent);
 
     @include font-style(34, 38, 500);
+
+    @include tablet {
+      @include font-style(28, 34, 500);
+    }
+
+    @include mobile {
+      @include font-style(24, 30, 500);
+    }
   }
 
   &__link {
@@ -30,6 +54,9 @@
 
     @include font-style(16, 28, 500);
 
+    @include tablet {
+      @include font-style(14, 24, 500);
+    }
 
     &-arrow {
       width: 16px;
@@ -42,9 +69,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-    }
+      max-width: min-content;
 
+    }
   }
 }

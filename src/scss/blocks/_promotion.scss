@@ -2,16 +2,26 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  @include mobile {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
   &__img-container {
     background-image: url("../../img/promotion/promotion1.jpg");
-
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      background-image: url(../../img/promotion/promotion1@2x.jpg);
-    }
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    @include mediaBg() {
+      background-image: url(../../img/promotion/promotion1@2x.jpg);
+
+    }
+
+    @include mobile {
+      order: 1;
+    }
   }
 
   &__content {
@@ -22,14 +32,20 @@
     padding: 101px 0 101px 72px;
 
     background-color: rgba(255, 171, 0, .4);
+
+
+    @include tablet {
+      padding: 60px 32px 60px 32px;
+    }
+
+    @include mobile {
+      padding: 28px 32px;
+    }
   }
 
   &__title {
     padding-top: 16px;
     padding-bottom: 16px;
-    @include font-style(40, 46, 500);
-    font-family: var(--font-accent);
-    letter-spacing: -0.4px;
   }
 
   &__sale {
@@ -40,6 +56,10 @@
 
   &__description {
     @include font-style(20, 32, 400);
+
+    @include mobile {
+      @include font-style(14, 22, 400);
+    }
   }
 
   &__expires {

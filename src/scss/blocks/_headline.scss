@@ -1,7 +1,33 @@
 .headline {
+  font-family: var(--font-accent);
+
+  &--3 {
+    @include font-style(40, 46, 500);
+    letter-spacing: -0.4px;
+
+    @include mobile {
+      @include font-style(34, 38, 500);
+      letter-spacing: -0.6px;
+    }
+  }
+
   &--4 {
     @include font-style(40, 44, 500);
     letter-spacing: -0.4px;
-    font-family: var(--font-accent);
+
+    @include tablet {
+      @include font-style(34, 38, 500);
+      letter-spacing: -0.6px;
+    }
+  }
+
+  &--5 {
+    @include font-style(40, 44, 500);
+    letter-spacing: -0.4px;
+
+    @include mobile {
+      letter-spacing: -0.6px;
+      @include font-style(28, 34, 500);
+    }
   }
 }
