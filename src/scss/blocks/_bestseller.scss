@@ -5,8 +5,24 @@
 
   &__cards {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
     gap: 48px 24px;
+
+    @include tablet {
+      grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
+      gap: 36px 18px;
+    }
+
+    @media(max-width: 840px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 16px 8px;
+    }
 
     &:last-child {
       padding-bottom: 100px;

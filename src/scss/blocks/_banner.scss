@@ -9,6 +9,10 @@
   }
   background-color: var(--bg-color-for-banner-bg);
 
+  @include mobile {
+    background-image: none;
+  }
+
   &__container {
     display: flex;
     justify-content: center;
@@ -26,6 +30,10 @@
     max-width: 488px;
 
     row-gap: 32px;
+
+    @include mobile {
+      max-width: 311px;
+    }
   }
 
   &__title {
@@ -33,7 +41,12 @@
   }
 
   &__description {
-    @include font-style(18, 30, 400)
+    @include font-style(18, 30, 400);
+    text-wrap: wrap;
+
+    @include mobile {
+      @include font-style(14, 22, 400);
+    }
   }
 
   &__form {

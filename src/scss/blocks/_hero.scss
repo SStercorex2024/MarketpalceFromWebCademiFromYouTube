@@ -34,6 +34,10 @@
     padding-right: calc(
             (100% - var(--container-width)) / 2 + var(--container-padding)
     );
+
+    @include tablet {
+      padding-right: var(--container-padding);
+    }
   }
 
   &__title {
