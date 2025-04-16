@@ -1,24 +1,33 @@
 .swiper {
   &-slide {
     width: 262px !important;
+    margin-right: 24px;
+
+
+    @include mobile {
+      width: 231px !important;
+      margin-right: 16px;
+    }
   }
 
 
   &-pagination {
-    position: static;
+    position: relative;
     display: flex;
     align-items: center;
     column-gap: 8px;
-
+    overflow: hidden;
+    width: 80px !important;
 
     &-bullet {
       display: flex;
       position: relative;
       cursor: pointer;
 
-
-      width: 16px;
+      //border: 1px solid black;
       aspect-ratio: 1;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       border: 1px solid transparent;
 
@@ -31,9 +40,9 @@
         transition: all 0.3s ease;
 
         width: 8px;
-        aspect-ratio: 1;
+        height: 8px;
         border-radius: 50%;
-        background-color: var(--color-neutral-04-10);
+        background-color: var(--color-neutral-04-10-dark-alt);
       }
 
       &-active {
