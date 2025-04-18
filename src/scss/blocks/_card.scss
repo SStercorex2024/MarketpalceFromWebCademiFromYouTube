@@ -1,10 +1,6 @@
 .card {
   position: relative;
-  display: grid;
-  row-gap: 12px;
   width: 262px;
-  justify-content: center;
-  align-items: center;
 
   @include tablet {
     width: 231px;
@@ -35,6 +31,7 @@
 
   &__picture {
     position: relative;
+    padding-bottom: 12px;
   }
 
   &__new {
@@ -88,12 +85,12 @@
   }
 
   &__title {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
     @include font-style(16, 26, 600);
 
     @include mobile {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
       br {
         display: none;
       }

@@ -9,12 +9,8 @@
     aspect-ratio: 1;
   }
 
-  &__title {
-    color: #E8ECEF;
-  }
-
-  &__policy,
-  &__terms-of-use {
-    font-weight: 600;
+  &__mobile__list {
+    display: flex;
+    column-gap: 24px;
   }
 }

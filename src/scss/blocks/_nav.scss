@@ -1,18 +1,61 @@
 .navigation {
-  font-family: var(--font-nav);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  color: var(--color-neutral-07-100-dark);
-
-
   background-color: var(--bg-color-for-menu);
-
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    font-family: var(--font-nav);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-neutral-07-100-dark);
+  }
+
+  &__logo-burger__wrapper {
+    display: flex;
+    column-gap: 4px;
+  }
+
+  &__burger-button {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    @include mobile-above {
+      display: none;
+    }
+
+    &:active {
+      gap: 0;
+
+      span {
+        background-color: #ac182c;
+      }
+    }
+
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 2px;
+      background-color: var(--color-neutral-07-100-dark);
+      border-radius: var(--border-radius-small);
+    }
+  }
+
+  &__menu {
+    @include mobile {
+      display: none;
+    }
   }
 
   &__list {
@@ -21,8 +64,9 @@
     @include mobile {
       position: absolute;
       top: 100%;
-      left: 100%;
+      left: 0;
       opacity: 0;
+      transform: translateX(100%);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
@@ -38,7 +82,7 @@
       row-gap: 15px;
       background-color: var(--bg-color-for-menu);
       border-radius: 0 0 10px 10px;
-      transition: transform 0.3s ease, opac ity 0.3s ease;;
+      transition: transform 0.3s ease, opacity 0.3s ease;
       transform: translateY(-100%);
     }
   }
@@ -110,6 +154,13 @@
   &__btns {
     display: flex;
     column-gap: 16px;
+  }
+
+  &__button-search,
+  &__button-user {
+    @include mobile {
+      display: none;
+    }
   }
 
   &__button {

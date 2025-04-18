@@ -13,6 +13,11 @@
 
   &--m {
     padding: 12px 56px;
+
+    @include mobile {
+      @include font-style(18, 32, 400);
+      letter-spacing: -0.4px;
+    }
   }
 
   &--s {

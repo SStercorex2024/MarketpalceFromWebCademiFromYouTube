@@ -16,7 +16,17 @@
 
   @include desktop-above {
     background-size: contain;
+  }
 
+  @include mobile-s {
+    height: 690px;
+
+    background-size: cover;
+    background-image: url(../../img/hero/hero-mobile-bg.jpg);
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url(../../img/hero/hero-mobile-bg@2x.jpg);
+    }
   }
 
   &__container {
@@ -38,6 +48,15 @@
     @include tablet {
       padding-right: var(--container-padding);
     }
+
+    @include mobile-s {
+      text-align: center;
+      text-wrap: nowrap;
+      align-items: center;
+      padding: 40px var(--container-padding);
+      row-gap: calc(var(--container-padding) / 2);
+      height: auto;
+    }
   }
 
   &__title {
@@ -52,14 +71,15 @@
     }
 
     @include mobile {
-      @include font-style(40, 42, 500)
-
+      @include font-style(40, 42, 500);
+      max-width: 311px;
     }
 
     u {
       text-decoration: none;
       color: var(--title-important-color);
     }
+
   }
 
   &__description {
@@ -67,6 +87,10 @@
     font-size: 20px;
     line-height: 32px;
     max-width: 424px;
+
+    @include mobile-s {
+      @include font-style(16, 26, 400);
+    }
   }
 
   &__button {
