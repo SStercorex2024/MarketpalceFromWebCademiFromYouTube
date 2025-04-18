@@ -36,6 +36,7 @@
     }
     @include mobile {
       padding: 32px 16px;
+      height: 202px;
     }
   }
 
@@ -61,6 +62,13 @@
 
   &__description {
     @include font-style(14, 24, 400);
+
+    br {
+      display: none;
+      @include mobile {
+        display: initial;
+      }
+    }
 
     @include mobile {
       font-family: var(--font-main);

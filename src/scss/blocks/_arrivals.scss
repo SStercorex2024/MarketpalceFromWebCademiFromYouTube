@@ -9,6 +9,10 @@
     row-gap: 40px;
 
     padding: 32px 0;
+
+    .card {
+      width: 231px;
+    }
   }
 
   &__row {
@@ -20,7 +24,7 @@
     display: flex;
     column-gap: 24px;
     @include mobile {
-      .card__picture{
+      .card__picture {
         width: 231px;
       }
     }

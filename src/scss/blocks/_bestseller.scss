@@ -4,13 +4,19 @@
   }
 
   &__cards {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
     gap: 48px 24px;
     align-items: flex-start;
 
+    @include desktop-above {
+    }
+
     @include tablet {
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
       gap: 36px 18px;
     }

@@ -8,25 +8,62 @@
     padding-top: 80px;
     padding-bottom: 50px;
     @include font-style(14, 22, 400);
+
+    @include mobile {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 
   &__logo-wrapper {
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__logo {
     padding-right: 32px;
     border-right: 1px solid var(--color-neutral-04-10-dark-alt);
+
+    @include mobile {
+      padding-right: 0;
+      border-right: none;
+      padding-bottom: 16px;
+    }
   }
 
   &__link {
+    position: relative;
     padding-left: 32px;
     color: #E8ECEF;
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 40%;
+      right: 0;
+      width: 24px;
+      height: 1px;
+      background-color: #6C7275;
+    }
+
+    @include mobile {
+      padding-top: 16px;
+      padding-left: 0;
+    }
   }
 
   &__menu-list {
     display: flex;
-    column-gap: 40px;
+    gap: 40px;
+
+    @include mobile {
+      flex-direction: column;
+      padding-top: 40px;
+      align-items: center;
+    }
   }
 
   &__bottom {
@@ -36,6 +73,12 @@
     padding-bottom: 20px;
 
     border-top: 1px solid var(--color-neutral-04-10-dark-alt);
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: center;
+      row-gap: 32px;
+    }
   }
 
 }
